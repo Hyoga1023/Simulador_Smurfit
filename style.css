@@ -1,0 +1,32 @@
+input{
+    padding: 10px;
+}
+.tipo_aportes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 200px;
+    box-sizing: border-box;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 200px;
+    box-sizing: border-box;
+}
+.acciones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.datos_cliente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 200px;
+    box-sizing: border-box;
+}
