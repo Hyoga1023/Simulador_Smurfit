@@ -236,6 +236,12 @@
   background-color:transparent;
   max-height: 150px;
 }
+.valores_inferior span{
+  font-size: 15px;
+}
+.valores_inferior h3{
+  font-size: 15px;
+}
 .grupo3{
   display: flex;
   justify-content: flex-end;
@@ -247,6 +253,9 @@
   flex-direction: column; 
   height: 100vh;
   width: 70%;
+}
+.grupo3 span{
+  font-size: 15px;
 }
 .container_grupo3_2{
   display: flex;
@@ -374,7 +383,8 @@ input{
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
-      flex-wrap: wrap; /* Esto permite que los elementos se envuelvan en lugar de amontonarse */
+      flex-wrap: wrap; 
+
   }
 
   .valores_inferior .container_agrupaciones, .valores_inferior .container_agrupaciones2 {
