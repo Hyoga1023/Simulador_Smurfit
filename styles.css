@@ -321,6 +321,12 @@ input{
   background-color: yellow;
   color: black;
 }
+.Botones{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 /* Estilos para pantallas de escritorio y dispositivos más grandes */
 @media (max-width: 1024px) {
   /* Asegura que el diseño se mantenga igual en portátiles */

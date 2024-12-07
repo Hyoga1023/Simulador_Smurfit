@@ -122,10 +122,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-document.getElementById("procesar-simulacion").addEventListener("click", () => {
+/*document.getElementById("procesar-simulacion").addEventListener("click", () => {
     // 1. Ejecutar la función de calcular valores
     calcularValores();
+});*/
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleccionar el botón "Volver Arriba"
+    const botonArriba = document.getElementById('volver-arriba');
 
-    // 2. Desplazar la página hacia arriba
-    window.scrollTo({ top: 0, behavior: "smooth" }); // "smooth" para un desplazamiento suave
+    // Asegurarse de que el botón fue encontrado
+    if (botonArriba) {
+        // Agregar evento de clic
+        botonArriba.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
