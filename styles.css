@@ -374,12 +374,15 @@ input{
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      flex-wrap: wrap; /* Esto permite que los elementos se envuelvan en lugar de amontonarse */
   }
 
   .valores_inferior .container_agrupaciones, .valores_inferior .container_agrupaciones2 {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 48%; /* Ajustar el ancho para que los elementos no se amontonen */
+      margin-bottom: 10px; /* Espacio entre las secciones */
   }
 
   .agrupación, .agrupación2 {
@@ -407,3 +410,4 @@ input{
       background-color: #45a049;
   }
 }
+
