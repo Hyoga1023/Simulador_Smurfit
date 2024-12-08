@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const sumaAcaoAveo = values.acao + values.aveo;
         
         // Modificación específica para total_avao_avae_apae_acae
-        const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.avee + values.apae + values.acae;
-        const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.avee + values.apae + values.acae;
+        const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.apae + values.acae;
+        const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae;
 
         // Debug log
         console.log('Desglose total_avao_avae_apae_acae:', {
