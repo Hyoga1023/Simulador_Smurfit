@@ -86,17 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const sumaAvaoAvae = totalAvao + totalAvae;
         const sumaAcaoAveo = values.acao + values.aveo;
         
-        // Modificación específica para total_avao_avae_apae_acae
+        // Cálculo de retiro total (sin incluir AVEE)
         const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.apae + values.acae;
-        const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae;
+        
+        // Cálculo de suma total (incluyendo AVEE)
+        const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae + values.avee;
 
         // Debug log
-        console.log('Desglose total_avao_avae_apae_acae:', {
+        console.log('Desglose de cálculos:', {
             totalAvao, 
             totalAvae, 
             apae: values.apae, 
             acae: values.acae, 
-            totalAvaoAvaeApaeAcae
+            totalAvaoAvaeApaeAcae,
+            sumaTotal
         });
 
         // Asignación de valores a los spans
@@ -105,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             avaeExento: values.avaeExento,
             avaeConRetencion: values.avaeConRetencion,
             avaeSinRetencion: values.avaeSinRetencion,
-            totalAvaoAvaeApaeAcae,
+            totalAvaoAvaeApaeAcae, // Ahora esto representa el retiro total sin AVEE
             sumaAvaoAvae,
             totalAvao,
             totalAvae,
@@ -114,27 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
             aveo: values.aveo,
             avee: values.avee,
             apae: values.apae,
-            sumaTotal
+            sumaTotal // Suma total incluyendo AVEE
         }).forEach(([key, value]) => {
             if (resultSpans[key]) {
                 resultSpans[key].textContent = formatCurrency(value);
             }
         });
     });
-});
-/*document.getElementById("procesar-simulacion").addEventListener("click", () => {
-    // 1. Ejecutar la función de calcular valores
-    calcularValores();
-});*/
-document.addEventListener('DOMContentLoaded', function () {
-    // Seleccionar el botón "Volver Arriba"
-    const botonArriba = document.getElementById('volver-arriba');
-
-    // Asegurarse de que el botón fue encontrado
-    if (botonArriba) {
-        // Agregar evento de clic
-        botonArriba.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
 });

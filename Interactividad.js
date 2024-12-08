@@ -50,3 +50,17 @@ document.getElementById("generar_pdf").addEventListener("click", () => {
         pdf.save("simulacion_horizontal.pdf");
     });
 });
+// Espera a que el documento esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    // Selecciona el botón "Volver Arriba"
+    const volverArribaBtn = document.getElementById("volver-arriba");
+
+    // Agrega un evento de clic al botón
+    volverArribaBtn.addEventListener("click", function() {
+        // Desplazamiento suave hacia arriba
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Esto hace que el desplazamiento sea suave
+        });
+    });
+});
