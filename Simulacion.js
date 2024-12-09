@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         acao: document.getElementById('acao'),
         aveo: document.getElementById('aveo'),
         avee: document.getElementById('avee'),
+        acae: document.getElementById('acae'),
         apae: document.getElementById('apae'),
         sumaTotal: document.getElementById('suma_total')
     };
@@ -116,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             acao: values.acao,
             aveo: values.aveo,
             avee: values.avee,
+            acae: values.acae,
             apae: values.apae,
             sumaTotal // Suma total incluyendo AVEE
         }).forEach(([key, value]) => {
