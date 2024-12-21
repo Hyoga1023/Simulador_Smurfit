@@ -335,6 +335,11 @@ input{
   justify-content: center;
   gap: 30px;
 }
+.logo_desarrollador{
+  align-items: center;
+  width: 15%;
+  height: auto;
+}
 
 /* Estilos para pantallas de escritorio y dispositivos más grandes */
 @media (max-width: 1024px) {
