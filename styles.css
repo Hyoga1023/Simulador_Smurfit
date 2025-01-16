@@ -33,12 +33,12 @@
 }
 .bloque_inferior {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 20px;
-  padding: 0 200px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  padding: 0 30px; 
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 5px; 
   width: 100%;
   color: hsl(202, 85%, 23%);
 }
@@ -51,9 +51,11 @@
 
 .datos_cliente1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .fec_gen{
@@ -279,14 +281,19 @@
   width: auto;
   height: 70%;
 }
+label {
+  margin-bottom: 0;
+}
 input{
   padding: 10px;
+  margin-top: 0;
+  max-width: 300px;
 }
 .tipo_aportes{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 5px;
   margin: 50px 200px;
   box-sizing: border-box;
 }

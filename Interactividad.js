@@ -64,3 +64,46 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+//sección para validar los campos y no permitir caracteres especiales
+
+// Selecciona todos los inputs dentro de la sección "tipo_aportes"
+const inputs = document.querySelectorAll('.tipo_aportes input');
+
+// Recorre cada input y agrega el evento de validación
+inputs.forEach((input) => {
+  input.addEventListener('input', (event) => {
+    const value = event.target.value;
+
+    // Si el valor contiene caracteres no válidos
+    if (/[^0-9]/.test(value)) {
+      alert("Por favor, ingresa solo números sin puntos, comas ni caracteres especiales.");
+      
+      // Elimina los caracteres inválidos
+      event.target.value = value.replace(/[^0-9]/g, '');
+    }
+  });
+});
+
+// Función para procesar la simulación
+function procesarSimulacion() {
+  let camposValidos = true; // Bandera para verificar todos los campos
+
+  inputs.forEach((input) => {
+    if (input.value.trim() === '') {
+      camposValidos = false;
+      alert(`El campo ${input.placeholder} no puede estar vacío.`);
+    }
+  });
+
+  if (camposValidos) {
+    // Aquí va la lógica para procesar la simulación
+    console.log("Todos los campos son válidos. Procesando simulación...");
+  } else {
+    console.log("Por favor, completa todos los campos antes de continuar.");
+  }
+}
+
+// Botón para procesar la simulación
+const botonSimulacion = document.getElementById('btn-simulacion');
+botonSimulacion.addEventListener('click', procesarSimulacion);

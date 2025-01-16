@@ -3,14 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const clientInputs = {
         cedula: document.getElementById('cedula'),
         nombre: document.getElementById('nombre'),
-        fecha: document.getElementById('fecha')
+        fecha: document.getElementById('fecha'),
+        fecha_antiguedad: document.getElementById('fecha_antiguedad')
     };
 
     // Elementos para mostrar datos del cliente
     const clientDisplays = {
         cedula: document.getElementById('cedula-mostrar'),
         nombre: document.getElementById('nombre-mostrar'),
-        fecha: document.getElementById('fecha-mostrar')
+        fecha: document.getElementById('fecha-mostrar'),
+        fecha_antiguedad: document.getElementById('fecha_antiguedad-mostrar')
     };
 
     // Inputs de valores
@@ -44,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         avee: document.getElementById('avee'),
         acae: document.getElementById('acae'),
         apae: document.getElementById('apae'),
-        sumaTotal: document.getElementById('suma_total')
+        sumaTotal: document.getElementById('suma_total'),
+        avaoAvaeApae: document.getElementById('avao_avae_apae') // Nuevo span agregado
     };
 
     // Botón de procesamiento
@@ -87,21 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const sumaAvaoAvae = totalAvao + totalAvae;
         const sumaAcaoAveo = values.acao + values.aveo;
         
+        // Nuevo cálculo corregido: AVAO_exento + Total AVAE + APAE
+        const avaoAvaeApae = values.avaoExento + totalAvae + values.apae;
+        
         // Cálculo de retiro total (sin incluir AVEE)
         const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.apae + values.acae;
         
         // Cálculo de suma total (incluyendo AVEE)
         const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae + values.avee;
-
-        // Debug log
-        console.log('Desglose de cálculos:', {
-            totalAvao, 
-            totalAvae, 
-            apae: values.apae, 
-            acae: values.acae, 
-            totalAvaoAvaeApaeAcae,
-            sumaTotal
-        });
 
         // Asignación de valores a los spans
         Object.entries({
@@ -109,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             avaeExento: values.avaeExento,
             avaeConRetencion: values.avaeConRetencion,
             avaeSinRetencion: values.avaeSinRetencion,
-            totalAvaoAvaeApaeAcae, // Ahora esto representa el retiro total sin AVEE
+            totalAvaoAvaeApaeAcae,
             sumaAvaoAvae,
             totalAvao,
             totalAvae,
@@ -119,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
             avee: values.avee,
             acae: values.acae,
             apae: values.apae,
-            sumaTotal // Suma total incluyendo AVEE
+            sumaTotal,
+            avaoAvaeApae // Agregado el nuevo cálculo
         }).forEach(([key, value]) => {
             if (resultSpans[key]) {
                 resultSpans[key].textContent = formatCurrency(value);
