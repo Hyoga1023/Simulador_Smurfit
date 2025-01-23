@@ -89,15 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalAvae = values.avaeExento + values.avaeConRetencion + values.avaeSinRetencion;
         const sumaAvaoAvae = totalAvao + totalAvae;
         const sumaAcaoAveo = values.acao + values.aveo;
-        
-        // Nuevo cálculo corregido: AVAO_exento + Total AVAE + APAE
         const avaoAvaeApae = values.avaoExento + totalAvae + values.apae;
-        
-        // Cálculo de retiro total (sin incluir AVEE)
         const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.apae + values.acae;
-        
-        // Cálculo de suma total (incluyendo AVEE)
         const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae + values.avee;
+        const aveeTotal = values.avee + values.acae;
 
         // Asignación de valores a los spans
         Object.entries({
@@ -112,11 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sumaAcaoAveo,
             acao: values.acao,
             aveo: values.aveo,
-            avee: values.avee,
-            acae: values.acae,
+            avee: aveeTotal,
             apae: values.apae,
             sumaTotal,
-            avaoAvaeApae // Agregado el nuevo cálculo
+            avaoAvaeApae
         }).forEach(([key, value]) => {
             if (resultSpans[key]) {
                 resultSpans[key].textContent = formatCurrency(value);

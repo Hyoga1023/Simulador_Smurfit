@@ -9,7 +9,7 @@
 .titulo_principal{
   margin-left: 100px;
   margin-right: 10px;
-  font-size: 22px;
+  font-size: 27px;
   margin-top: 30px;
 }
 .aportes{
@@ -33,12 +33,12 @@
 }
 .bloque_inferior {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start; 
-  padding: 0 30px; 
-  margin-bottom: 20px;
-  gap: 5px; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  gap: 10px;
   width: 100%;
   color: hsl(202, 85%, 23%);
 }
@@ -51,25 +51,23 @@
 
 .datos_cliente1 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .fec_gen{
   display: flex;
   justify-content: space-between;
   margin: 0px 300px 0 0;
-  gap: 50px;
+  gap: 10px;
   margin-right: 20px;
 }
 .datos_cliente_span {
   display: flex;
   justify-content: space-between;
   margin: 0 10px;
-  gap: 50px;
+  gap: 20px;
   margin-right: 20px;
 }
 
@@ -102,7 +100,7 @@
 }
 
 .valores_calculos {
-  font-size: 18px;
+  font-size: 19px;
   background-color: #51ace0;
   color: white;
   padding: 5px 10px;
@@ -114,7 +112,7 @@
 }
 
 .etiquetas {
-  font-size: 18px;
+  font-size: 20px;
   background-color: #51ace0;
   color: white;
   padding: 5px 10px;
@@ -123,7 +121,6 @@
   flex: 1; 
   margin-left: 5px; 
 }
-
 
 .columna_izquierda{
   display: flex;
@@ -170,7 +167,7 @@
   background-color: #f9f9f9;
 }
 .texto_parrafo{
-  font-size: 16px;
+  font-size: 18px;
 }
 .container_agrupaciones{
   display: flex;
@@ -193,14 +190,23 @@
   display: flex;
   flex-direction: column;
 }
-.mensajes{
+.mensajes {
+  background: #51ace0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content:center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .mensaje{
-  color: #4a9ecf;
+  color: white;
+}
+.Fondo_Texto {
+  display: inline-block;
+  background-color: #f9f9f9;
+  padding:10px 5px;
+  border-radius: 10px;
+  margin:0 210px;
 }
 .contenedor_etiquetas{
   display: flex;
@@ -224,11 +230,6 @@
   justify-content: center;
   gap: 0;
 }
-.imagen_sala{
-  display: flex;
-  justify-content: flex-end;
-  width: 40%;
-}
 .valores_inferior{
   display: flex;
   justify-content:space-around;
@@ -239,7 +240,7 @@
   max-height: 150px;
 }
 .valores_inferior span{
-  font-size: 15px;
+  font-size: 17px;
 }
 .valores_inferior h3{
   font-size: 15px;
@@ -281,19 +282,14 @@
   width: auto;
   height: 70%;
 }
-label {
-  margin-bottom: 0;
-}
 input{
   padding: 10px;
-  margin-top: 0;
-  max-width: 300px;
 }
 .tipo_aportes{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 30px;
   margin: 50px 200px;
   box-sizing: border-box;
 }
@@ -432,4 +428,3 @@ input{
       background-color: #45a049;
   }
 }
-
