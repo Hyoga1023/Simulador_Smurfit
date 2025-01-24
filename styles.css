@@ -60,6 +60,7 @@
 .fec_gen{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0px 300px 0 0;
   gap: 7px;
   margin-right: 20px;
