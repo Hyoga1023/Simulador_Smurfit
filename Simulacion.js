@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         acae: document.getElementById('acae'),
         apae: document.getElementById('apae'),
         sumaTotal: document.getElementById('suma_total'),
-        avaoAvaeApae: document.getElementById('avao_avae_apae') // Nuevo span agregado
+        avaoAvaeApaeAcae2: document.getElementById('avao_avae_apae_acae') 
     };
 
     // Botón de procesamiento
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalAvae = values.avaeExento + values.avaeConRetencion + values.avaeSinRetencion;
         const sumaAvaoAvae = totalAvao + totalAvae;
         const sumaAcaoAveo = values.acao + values.aveo;
-        const avaoAvaeApae = values.avaoExento + totalAvae + values.apae;
+        const avaoAvaeApaeAcae2 = values.avaoExento + totalAvae + values.apae + values.acae;
         const totalAvaoAvaeApaeAcae = sumaAvaoAvae + values.apae + values.acae;
         const sumaTotal = sumaAvaoAvae + sumaAcaoAveo + values.apae + values.acae + values.avee;
         const aveeTotal = values.avee + values.acae;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             avee: aveeTotal,
             apae: values.apae,
             sumaTotal,
-            avaoAvaeApae
+            avaoAvaeApaeAcae2
         }).forEach(([key, value]) => {
             if (resultSpans[key]) {
                 resultSpans[key].textContent = formatCurrency(value);
